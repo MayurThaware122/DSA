@@ -1,0 +1,72 @@
+//[A]: Create an array of size n and write a program to sort a given array by selection sort and bubble sort.
+
+// SELECTION SORT 
+
+#include<stdio.h>
+void main ()
+{
+    int a[100],z,j,i,temp;
+    printf("enter the array size\n");
+    scanf("%d",&z);
+   printf("enter the array element\n");
+    for(i=0;i<z;i++)
+    {
+        scanf("%d",&a[i]);
+        }
+        for(i=0;i<z;i++){
+
+        for(j=0;j<=z;j++)
+        {
+            if (a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+
+printf("Array after sorting is\n");
+for (i=0;i<z;i++)
+{
+
+printf("%d\n",a[i]);
+}
+
+}
+
+//BUBBLE SORT 
+
+#include<stdio.h>
+void main ()
+{
+    int a[100],e,i,j,temp;
+    printf("enter array size\n");
+    scanf("%d",&e);
+    printf("enter array element\n");
+    for(i=0;i<e;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+for(i=0;i<e;i++)
+{
+    for (j=0;j<=e;j++)
+    {
+        if(a[j]>a[j+1])
+        {
+            temp=a[j];
+            a[j]=a[j+1];
+            a[j+1]=temp;
+
+        }
+    }
+}
+printf("Array after sorting is\n");
+for(i=0;i<e;i++)
+{
+    printf("%d\n",a[i]);
+}
+}
+
+
